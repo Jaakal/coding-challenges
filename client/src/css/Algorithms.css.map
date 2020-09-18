@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,qBAAqB,CAAC;EACpB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,IAAI;EACf,gBAAgB,EAAE,IAAI;CAOvB;;AAdD,AASE,qBATmB,CASnB,EAAE,CAAC;EACD,MAAM,EAAE,aAAa;EACrB,WAAW,EAAE,WAAW;EACxB,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "Algorithms.scss"
+    ],
+    "names": [],
+    "file": "Algorithms.css"
+}

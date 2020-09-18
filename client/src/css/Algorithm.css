@@ -1,0 +1,113 @@
+.algorithm-wrapper {
+  position: fixed;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 50px 40px;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  white-space: pre-wrap;
+  background-color: white;
+  overflow-y: scroll;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.algorithm-wrapper .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: chartreuse;
+}
+
+.algorithm-wrapper .close-button span:nth-of-type(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  border-bottom: 1px solid green;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.algorithm-wrapper .close-button span:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  border-bottom: 1px solid green;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.algorithm-wrapper .close-button:hover {
+  cursor: pointer;
+}
+
+.algorithm-wrapper .algorithm-inner-wrapper {
+  position: relative;
+}
+
+.algorithm-wrapper .code-block {
+  background-color: #dce7eb;
+}
+
+.algorithm-wrapper .function {
+  color: #0cd0e6;
+}
+
+.algorithm-wrapper .variable {
+  color: #6beb03;
+}
+
+.algorithm-wrapper .block-name {
+  color: #F50303;
+}
+
+.algorithm-wrapper .input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 40px 30px;
+  background-color: salmon;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.algorithm-wrapper .input-form .error {
+  height: 30px;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+
+.algorithm-wrapper .input-form label[for="array"] {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.algorithm-wrapper .input-form input[name="array"] {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.algorithm-wrapper .input-form .output {
+  margin-bottom: 40px;
+}
+/*# sourceMappingURL=Algorithm.css.map */
