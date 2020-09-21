@@ -9,7 +9,11 @@ import Algorithm from '../algorithms/Algorithm'
 
 const Algorithms = ({ algorithms, addAlgorithm }) => {
   useEffect(() => {
-    addAlgorithm({ 'advanced-merge-sort': 'Advanced Merge Sort' })
+    addAlgorithm({
+      'advanced-merge-sort': 'Advanced Merge Sort', 
+      'lru-cache': 'LRU Cache', 
+      'number-of-binary-tree-topologies': 'Number Of Binary Tree Topologies', 
+    })
   }, [addAlgorithm])
 
   return (

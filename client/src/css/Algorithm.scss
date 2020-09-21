@@ -225,13 +225,13 @@
       color: #ff0000;
     }
 
-    label[for="array"] {
+    label {
       margin-bottom: 20px;
       width: 100%;
       white-space: nowrap;
     }
 
-    input[name="array"] {
+    input[type="text"] {
       appearance: none;
       align-self: flex-start;
       margin-bottom: 30px;

@@ -247,13 +247,13 @@
   color: #ff0000;
 }
 
-.algorithm-wrapper .input-form label[for="array"] {
+.algorithm-wrapper .input-form label {
   margin-bottom: 20px;
   width: 100%;
   white-space: nowrap;
 }
 
-.algorithm-wrapper .input-form input[name="array"] {
+.algorithm-wrapper .input-form input[type="text"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

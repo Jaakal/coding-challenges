@@ -1,0 +1,20 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install --prefix client",
+    "start": "npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaakal/coding-challenges.git"
+  },
+  "author": "Jaak Kivinukk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaakal/coding-challenges/issues"
+  },
+  "homepage": "https://github.com/Jaakal/coding-challenges#readme"
+}
