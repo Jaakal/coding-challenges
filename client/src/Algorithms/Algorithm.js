@@ -13,14 +13,17 @@ const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setA
     setActiveAlgorithm(slug)
   }, [setActiveAlgorithm, slug])
 
-  const closeAlgorithm = () => {
-    // setActiveAlgorithm(null)
-    history.goBack()
-  }
-
   return (
     <div className="algorithm-wrapper">
-      <div onClick={closeAlgorithm} className="close-button"><span></span><span></span></div>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <span className="frame"></span>
+      <div onClick={() => history.goBack()} className="close-button"><span></span><span></span></div>
       <div className="algorithm-inner-wrapper">
         { activeAlgorithm === 'advanced-merge-sort' && <AdvancedMergeSort /> }
       </div>

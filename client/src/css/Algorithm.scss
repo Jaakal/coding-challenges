@@ -1,15 +1,86 @@
 .algorithm-wrapper {
   position: fixed;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 95vw;
+  max-height: 95vh;
   padding: 50px 40px;
   top: 50%;
   left: 50%;
   font-size: 20px;
   white-space: pre-wrap;
   background-color: white;
-  overflow-y: scroll;
   transform: translate(-50%, -50%);
+
+  span.frame:nth-of-type(1) {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(45deg, black, transparent);
+  }
+
+  span.frame:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(45deg, transparent, #000000);
+  }
+  
+  span.frame:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(45deg, black, transparent);
+  }
+
+  span.frame:nth-of-type(4) {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(45deg, transparent, #000000);
+  }
+  
+  span.frame:nth-of-type(5) {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 50%;
+    width: 2px;
+    background: linear-gradient(45deg, transparent, #000000);
+  }
+
+  span.frame:nth-of-type(6) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70%;
+    width: 2px;
+    background: linear-gradient(45deg, transparent, #000000);
+  }
+
+  span.frame:nth-of-type(7) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 2px;
+    background: linear-gradient(45deg, black, transparent);
+  }
+
+  span.frame:nth-of-type(8) {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    height: 50%;
+    width: 2px;
+    background: linear-gradient(45deg, #000000, transparent);
+  }
 
   .close-button {
     position: absolute;
@@ -17,14 +88,14 @@
     right: 10px;
     width: 20px;
     height: 20px;
-    background: chartreuse;
 
     span:nth-of-type(1) {
       position: absolute;
       top: 50%;
       left: 50%;
       width: 20px;
-      border-bottom: 1px solid green;
+      height: 1px;
+      background-color: #000000;
       transform: translate(-50%, -50%) rotate(45deg);
     }
     
@@ -33,21 +104,38 @@
       top: 50%;
       left: 50%;
       width: 20px;
-      border-bottom: 1px solid green;
+      height: 1px;
+      background-color: #000000;
       transform: translate(-50%, -50%) rotate(-45deg);
     }
 
     &:hover {
       cursor: pointer;
+    
+      span {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+      }
     }
   }
 
   .algorithm-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    max-width: calc(95vw - 80px);
+    max-height: calc(95vh - 100px);
   }
 
   .code-block {
-    background-color: rgb(220, 231, 235);
+    padding: 10px;
+    max-width: calc(95vw - 80px);
+    background-color: #f7f7f7;
+    overflow: scroll;
+  }
+
+  .code-line {
+    white-space: nowrap;
   }
 
   .function {
@@ -62,17 +150,74 @@
     color: #F50303;
   }
 
+  .open-button {
+    margin-top: 20px;
+    font-family: 'Agelast';
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  .form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 8px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+
+    span.form-frame:nth-of-type(1) {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(45deg, black, transparent 20%, transparent 30%, #000000);
+    }
+    
+    span.form-frame:nth-of-type(3) {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(45deg, black, transparent 70%, transparent 80%, #000000);
+    }
+  
+    span.form-frame:nth-of-type(2) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(45deg, #000000, transparent 20%, transparent 30%, #000000);
+    }
+    
+    span.form-frame:nth-of-type(4) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(45deg, #000000, transparent 70%, transparent 80%, #000000);
+    }
+  }
+
   .input-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
     padding: 40px 30px;
-    background-color: salmon;
-    transform: translate(-50%, -50%);
+    font-family: 'Trench';
+    background-color: #ffffff;  
 
     .error {
       height: 30px;
@@ -83,16 +228,27 @@
     label[for="array"] {
       margin-bottom: 20px;
       width: 100%;
+      white-space: nowrap;
     }
 
     input[name="array"] {
+      appearance: none;
       align-self: flex-start;
       margin-bottom: 30px;
       width: 100%;
+      background-color: #ffffff;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #000000;
     }
 
     .output {
       margin-bottom: 40px;
     }
+
+  }
+  
+  .submit-form {
+    font-size: 16px;
   }
 }

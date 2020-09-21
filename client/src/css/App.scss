@@ -1,12 +1,25 @@
 @font-face {
-  font-family: 'Corrupter';
-  src: url('../fonts/Corrupter.eot');
-  src: url('../fonts/Corrupter.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Corrupter.woff2') format('woff2'),
-      url('../fonts/Corrupter.woff') format('woff'),
-      url('../fonts/Corrupter.ttf') format('truetype'),
-      url('../fonts/Corrupter.svg#Corrupter') format('svg');
+  font-family: 'Agelast';
+  src: url('../fonts/AgelastRegular.eot');
+  src: url('../fonts/AgelastRegular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/AgelastRegular.woff2') format('woff2'),
+      url('../fonts/AgelastRegular.woff') format('woff'),
+      url('../fonts/AgelastRegular.ttf') format('truetype'),
+      url('../fonts/AgelastRegular.svg#AgelastRegular') format('svg');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trench';
+  src: url('../fonts/Trench-Thin.eot');
+  src: url('../fonts/Trench-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Trench-Thin.woff2') format('woff2'),
+      url('../fonts/Trench-Thin.woff') format('woff'),
+      url('../fonts/Trench-Thin.ttf') format('truetype'),
+      url('../fonts/Trench-Thin.svg#Trench-Thin') format('svg');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }

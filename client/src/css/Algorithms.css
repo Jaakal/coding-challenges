@@ -12,12 +12,60 @@
   width: 100vw;
   min-height: 100vh;
   font-size: 30px;
-  background-color: aqua;
 }
 
 .algorithms-container h1 {
   margin: 60px 0 40px 0;
-  font-family: 'Corrupter';
+  font-family: 'Agelast';
   font-size: 50px;
+}
+
+.algorithms-container .coding-challenge-link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.algorithms-container .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.algorithms-container .line {
+  position: absolute;
+  left: -5px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(45deg, black 30%, transparent);
+}
+
+.algorithms-container .coding-challenge-link {
+  margin-left: 25px;
+  font-family: 'Trench';
+  text-decoration: none;
+  color: #000000;
+}
+
+.algorithms-container .coding-challenge-link:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  .algorithms-container {
+    font-size: 20px;
+  }
+  .algorithms-container h1 {
+    font-size: 30px;
+  }
+  .algorithms-container .algorithm-wrapper {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=Algorithms.css.map */

@@ -5,7 +5,7 @@ import { Link, Route } from 'react-router-dom';
 
 import { addAlgorithm } from '../actions/algorithm'
 
-import Algorithm from '../Algorithms/Algorithm'
+import Algorithm from '../algorithms/Algorithm'
 
 const Algorithms = ({ algorithms, addAlgorithm }) => {
   useEffect(() => {
@@ -14,9 +14,13 @@ const Algorithms = ({ algorithms, addAlgorithm }) => {
 
   return (
     <div className="algorithms-container">
-      <h1>Algorithms & Data Structures</h1>
+      <h1>Coding Challenges</h1>
       {Object.keys(algorithms).map(key => (
-        <Link key={key} to={`/${key}`}>{algorithms[key]}</Link>
+        <div key={key} className="coding-challenge-link-wrapper">
+          <span className="dot"></span>
+          <span className="line"></span>
+          <Link className="coding-challenge-link" to={`/${key}`}>{algorithms[key]}</Link>
+        </div>
       ))}
       <Route path="/:slug" component={Algorithm} />
     </div>
