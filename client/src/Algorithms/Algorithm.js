@@ -9,6 +9,7 @@ import '../css/Algorithm.css'
 import AdvancedMergeSort from './AdvancedMergeSort'
 import LRUCache from './LRUCache'
 import NumberOfBinaryTreeTopologies from './NumberOfBinaryTreeTopologies'
+import SmallestSubstringContaining from './SmallestSubstringContaining'
 
 const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setActiveAlgorithm })=> {
   useEffect(() => {
@@ -30,6 +31,7 @@ const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setA
         { activeAlgorithm === 'advanced-merge-sort' && <AdvancedMergeSort /> }
         { activeAlgorithm === 'lru-cache' && <LRUCache /> }
         { activeAlgorithm === 'number-of-binary-tree-topologies' && <NumberOfBinaryTreeTopologies /> }
+        { activeAlgorithm === 'smallest-substring-containing' && <SmallestSubstringContaining /> }
       </div>
     </div>
   )

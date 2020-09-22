@@ -9,8 +9,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  min-height: 100vh;
   font-size: 30px;
 }
 
@@ -18,9 +16,12 @@
   margin: 60px 0 40px 0;
   font-family: 'Agelast';
   font-size: 50px;
+  white-space: nowrap;
 }
 
 .algorithms-container .coding-challenge-link-wrapper {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,6 +29,8 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin-left: 100px;
+  white-space: nowrap;
 }
 
 .algorithms-container .dot {
@@ -60,6 +63,9 @@
 @media only screen and (max-width: 600px) {
   .algorithms-container {
     font-size: 20px;
+  }
+  .algorithms-container .coding-challenge-link-wrapper {
+    margin-left: 50px;
   }
   .algorithms-container h1 {
     font-size: 30px;

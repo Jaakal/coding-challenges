@@ -13,6 +13,7 @@ const Algorithms = ({ algorithms, addAlgorithm }) => {
       'advanced-merge-sort': 'Advanced Merge Sort', 
       'lru-cache': 'LRU Cache', 
       'number-of-binary-tree-topologies': 'Number Of Binary Tree Topologies', 
+      'smallest-substring-containing': 'Smallest Substring Containing', 
     })
   }, [addAlgorithm])
 
