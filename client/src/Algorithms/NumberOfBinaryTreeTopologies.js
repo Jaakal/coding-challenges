@@ -1,64 +1,70 @@
 import React, { Fragment, useState } from 'react';
 
-import { createWhiteSpace } from '../utility/utility';
+import { codeStringToHTML } from '../utility/utility';
 
-const codeString = `<div class="code-line"><span class="variable">const</span> <span class="function">numberOfBinaryTreeTopologiesRecursive</span> = (nodeCount, cache) => {</div><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="block-name">if</span> (cache[nodeCount])</div><div class="code-line">${createWhiteSpace(
-  4
-)}<span class="block-name">return</span> cache[nodeCount]</div></br><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="variable">let</span> sum = 0</div></br><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="block-name">for</span> (let i = 0; i <dd nodeCount; i += 1) {</div><div class="code-line">${createWhiteSpace(
-  4
-)}<span class="variable">const</span> left = <span class="function">numberOfBinaryTreeTopologiesRecursive</span>(i, cache)</div><div class="code-line">${createWhiteSpace(
-  4
-)}<span class="variable">const</span> right = <span class="function">numberOfBinaryTreeTopologiesRecursive</span>(nodeCount - i - 1, cache)</div></br><div class="code-line">${createWhiteSpace(
-  4
-)}sum += left * right</div><div class="code-line">${createWhiteSpace(
-  2
-)}}</div></br><div class="code-line">${createWhiteSpace(
-  2
-)}cache[nodeCount] = sum</div></br><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="block-name">return</span> cache[nodeCount]</div><div class="code-line">}</div></br><div class="code-line"><span class="variable">const</span> <span class="function">numberOfBinaryTreeTopologies</span> = n => {</div><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="variable">const</span> cache = { 0: 1 }</div></br><div class="code-line">${createWhiteSpace(
-  2
-)}<span class="block-name">return</span> numberOfBinaryTreeTopologiesRecursive(n, cache)</div><div class="code-line">}</div>`;
+const codeString = `
+const numberOfBinaryTreeTopologiesRecursive = (nodeCount, cache) => {
+  if (cache[nodeCount]) return cache[nodeCount]
 
-const NumberOfBinaryTreeTopologies = (props) => {
+  let sum = 0
+
+  for (let i = 0; i < nodeCount; i += 1) {
+    const left = numberOfBinaryTreeTopologiesRecursive(i, cache)
+    const right = numberOfBinaryTreeTopologiesRecursive(
+      nodeCount - i - 1,
+      cache
+    );
+
+    sum += left * right
+  }
+
+  cache[nodeCount] = sum
+
+  return cache[nodeCount]
+}
+
+const numberOfBinaryTreeTopologies = (n) => {
+  const cache = { 0: 1 }
+
+  return numberOfBinaryTreeTopologiesRecursive(n, cache)
+}
+`
+
+const functionNames = ['numberOfBinaryTreeTopologiesRecursive', 'numberOfBinaryTreeTopologies']
+const variableNames = ['const', 'let']
+const blockNames = ['if', 'for', 'return']
+
+const NumberOfBinaryTreeTopologies = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [nodes, setNodes] = useState('');
   const [error, setError] = useState('');
   const [output, setOutput] = useState('');
 
   const numberOfBinaryTreeTopologiesRecursive = (nodeCount, cache) => {
-    if (cache[nodeCount]) return cache[nodeCount];
+    if (cache[nodeCount]) return cache[nodeCount]
 
-    let sum = 0;
+    let sum = 0
 
     for (let i = 0; i < nodeCount; i += 1) {
-      const left = numberOfBinaryTreeTopologiesRecursive(i, cache);
+      const left = numberOfBinaryTreeTopologiesRecursive(i, cache)
       const right = numberOfBinaryTreeTopologiesRecursive(
         nodeCount - i - 1,
         cache
       );
 
-      sum += left * right;
+      sum += left * right
     }
 
-    cache[nodeCount] = sum;
+    cache[nodeCount] = sum
 
-    return cache[nodeCount];
-  };
+    return cache[nodeCount]
+  }
 
   const numberOfBinaryTreeTopologies = (n) => {
-    const cache = { 0: 1 };
+    const cache = { 0: 1 }
 
-    return numberOfBinaryTreeTopologiesRecursive(n, cache);
-  };
+    return numberOfBinaryTreeTopologiesRecursive(n, cache)
+  }
 
   const closeInputForm = () => {
     setNodes('');
@@ -84,7 +90,7 @@ const NumberOfBinaryTreeTopologies = (props) => {
     <Fragment>
       <div
         className='code-block'
-        dangerouslySetInnerHTML={{ __html: codeString }}
+        dangerouslySetInnerHTML={{ __html: codeStringToHTML(codeString, functionNames, variableNames, blockNames)}}
       />
       <button className='open-button' onClick={() => setFormOpen(true)}>
         Input Form

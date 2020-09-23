@@ -10,10 +10,12 @@ import AdvancedMergeSort from './AdvancedMergeSort'
 import LRUCache from './LRUCache'
 import NumberOfBinaryTreeTopologies from './NumberOfBinaryTreeTopologies'
 import SmallestSubstringContaining from './SmallestSubstringContaining'
+import RightSmallerThan from './RightSmallerThan'
 
 const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setActiveAlgorithm })=> {
   useEffect(() => {
     setActiveAlgorithm(slug)
+    return () => setActiveAlgorithm(null)
   }, [setActiveAlgorithm, slug])
 
   return (
@@ -32,6 +34,7 @@ const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setA
         { activeAlgorithm === 'lru-cache' && <LRUCache /> }
         { activeAlgorithm === 'number-of-binary-tree-topologies' && <NumberOfBinaryTreeTopologies /> }
         { activeAlgorithm === 'smallest-substring-containing' && <SmallestSubstringContaining /> }
+        { activeAlgorithm === 'right-smaller-than' && <RightSmallerThan /> }
       </div>
     </div>
   )
