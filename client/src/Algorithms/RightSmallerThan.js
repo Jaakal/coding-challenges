@@ -124,10 +124,6 @@ const RightSmallerThan = () => {
     return outputArray
   }
 
-  useEffect(() => {
-    codeStringToHTML(codeString)
-  }, [])
-
   const handleSubmit = event => {
     event.preventDefault()
     let integerArray = inputArray.split(/[, ]/g).filter(element => element.length > 0)
@@ -149,7 +145,7 @@ const RightSmallerThan = () => {
     }
     
     setError('')
-    setOutput(rightSmallerThan(integerArray))
+    setOutput(stringifyArray(rightSmallerThan(integerArray)))
   }
   
   const closeInputForm = () => {
