@@ -11,6 +11,7 @@ import LRUCache from './LRUCache'
 import NumberOfBinaryTreeTopologies from './NumberOfBinaryTreeTopologies'
 import SmallestSubstringContaining from './SmallestSubstringContaining'
 import RightSmallerThan from './RightSmallerThan'
+import LongestIncreasingSubsequence from './LongestIncreasingSubsequence'
 
 const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setActiveAlgorithm })=> {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setA
         { activeAlgorithm === 'number-of-binary-tree-topologies' && <NumberOfBinaryTreeTopologies /> }
         { activeAlgorithm === 'smallest-substring-containing' && <SmallestSubstringContaining /> }
         { activeAlgorithm === 'right-smaller-than' && <RightSmallerThan /> }
+        { activeAlgorithm === 'longest-increasing-subsequence' && <LongestIncreasingSubsequence /> }
       </div>
     </div>
   )

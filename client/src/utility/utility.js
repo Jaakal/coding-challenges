@@ -24,9 +24,11 @@ const addColorTags = (line, functionNames, variableNames, blockNames) => {
       let index = newLine.indexOf(functionNames[i])
 
       if (index > -1) {
-        newLine = newLine.splice(index, 0, '<span class="function">')
-        index = newLine.indexOf(functionNames[i])
-        newLine = newLine.splice(index + functionNames[i].length, 0, '</span>')
+        if (newLine[index + functionNames[i].length] === ' ' || newLine[index + functionNames[i].length] === '(') {
+          newLine = newLine.splice(index, 0, '<span class="function">')
+          index = newLine.indexOf(functionNames[i])
+          newLine = newLine.splice(index + functionNames[i].length, 0, '</span>')
+        }
       }
     }
   
@@ -45,7 +47,7 @@ const addColorTags = (line, functionNames, variableNames, blockNames) => {
     for (let i = 0; i < blockNames.length; i += 1) {
       let index = newLine.indexOf(blockNames[i])
 
-      if (index > -1) {
+      if (index > -1 && newLine[index + blockNames[i].length] === ' ') {
         newLine = newLine.splice(index, 0, '<span class="block-name">')
         index = newLine.indexOf(blockNames[i])
         newLine = newLine.splice(index + blockNames[i].length, 0, '</span>')

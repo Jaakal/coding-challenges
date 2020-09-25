@@ -14,7 +14,8 @@ const Algorithms = ({ algorithms, addAlgorithm }) => {
       'lru-cache': 'LRU Cache', 
       'number-of-binary-tree-topologies': 'Number Of Binary Tree Topologies', 
       'smallest-substring-containing': 'Smallest Substring Containing', 
-      'right-smaller-than': 'Right Smaller Than' 
+      'right-smaller-than': 'Right Smaller Than',
+      'longest-increasing-subsequence': 'Longest Increasing Subsequence' 
     })
   }, [addAlgorithm])
 
