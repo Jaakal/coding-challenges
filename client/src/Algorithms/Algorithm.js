@@ -12,6 +12,7 @@ import NumberOfBinaryTreeTopologies from './NumberOfBinaryTreeTopologies'
 import SmallestSubstringContaining from './SmallestSubstringContaining'
 import RightSmallerThan from './RightSmallerThan'
 import LongestIncreasingSubsequence from './LongestIncreasingSubsequence'
+import SquareOfZeroes from './SquareOfZeroes'
 
 const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setActiveAlgorithm })=> {
   useEffect(() => {
@@ -37,6 +38,7 @@ const Algorithm = ({ match: { params: { slug } }, history, activeAlgorithm, setA
         { activeAlgorithm === 'smallest-substring-containing' && <SmallestSubstringContaining /> }
         { activeAlgorithm === 'right-smaller-than' && <RightSmallerThan /> }
         { activeAlgorithm === 'longest-increasing-subsequence' && <LongestIncreasingSubsequence /> }
+        { activeAlgorithm === 'square-of-zeroes' && <SquareOfZeroes /> }
       </div>
     </div>
   )

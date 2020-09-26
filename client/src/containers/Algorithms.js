@@ -15,7 +15,8 @@ const Algorithms = ({ algorithms, addAlgorithm }) => {
       'number-of-binary-tree-topologies': 'Number Of Binary Tree Topologies', 
       'smallest-substring-containing': 'Smallest Substring Containing', 
       'right-smaller-than': 'Right Smaller Than',
-      'longest-increasing-subsequence': 'Longest Increasing Subsequence' 
+      'longest-increasing-subsequence': 'Longest Increasing Subsequence',
+      'square-of-zeroes': 'SquareOfZeroes' 
     })
   }, [addAlgorithm])
 

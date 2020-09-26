@@ -110,3 +110,10 @@ export const stringifyArray = array => {
 
   return returnString
 }
+
+export const stringifyBoolean = boolean => {
+  if (boolean)
+    return 'true'
+  
+  return 'false'
+}
