@@ -12,11 +12,12 @@ const Algorithms = ({ algorithms, addAlgorithm }) => {
     addAlgorithm({
       'advanced-merge-sort': 'Advanced Merge Sort', 
       'lru-cache': 'LRU Cache', 
-      'number-of-binary-tree-topologies': 'Number Of Binary Tree Topologies', 
+      'number-of-binary-tree-topologies': 'Number of Binary Tree Topologies', 
       'smallest-substring-containing': 'Smallest Substring Containing', 
       'right-smaller-than': 'Right Smaller Than',
       'longest-increasing-subsequence': 'Longest Increasing Subsequence',
-      'square-of-zeroes': 'SquareOfZeroes' 
+      'square-of-zeroes': 'Square of Zeroes', 
+      'airport-connections': 'Airport Connections', 
     })
   }, [addAlgorithm])
 
